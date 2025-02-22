@@ -32,4 +32,26 @@ public class Student {
   public boolean isActivate() {
     return activated;
   }
+
+  public void activate(){
+    if(this.activated){
+      throw new IllegalArgumentException();
+    }
+    this.activated = true;
+  }
+
+  public void deactivate(){
+    if(!this.activated){
+      throw new IllegalArgumentException();
+    }
+    this.activated = false;
+  }
+
+  public void setActivate(boolean activated){
+    if(activated == this.activated){
+      throw(new IllegalArgumentException());
+    }
+
+    this.activated = activated;
+  }
 }
